@@ -4,7 +4,7 @@
 1. [Goal](#1.Goal)
 2. [Resolution](#2.Resolution)
 3. [Method](#3.Method)
-4. [Results & Expected effects](#4.Results & Expected effects)
+4. [Results&Expected effects](#4.Results&Expected effects)
 
 ## Goal
 -Increased accessibility
@@ -40,7 +40,7 @@ Users may simply submit data and review analytic results thanks to user-friendly
 - Modeling & Optimization & Predicting: The AutoML library selects the best performing model among optimized models. Make a prediction with the model.
 - Visualization and Results Analysis: Using XAI techniques such as shap,pdp,ice,lime, etc., the importance of variables, the effect of variables on prediction, regional and individual variable analysis, etc. are conducted.
 
-## Results & Expected effects
+## Results&Expected effects
 - Our user-friendly AutoML service utilizes XAI technology to reduce the complexity and increase transparency of artificial intelligence, thereby improving the accessibility of AI technology by helping not only professionals but also nonprofessionals make data-driven decisions easily.
 - Our AutoML service simplifies data analysis by providing customized modes for both professionals and nonprofessionals, and integrates XAI technology to clearly understand the validity and results of the model.
 - By integrating various libraries such as PyCaret, it is expected to provide users with broader functionality and contribute to the overall industry development.
