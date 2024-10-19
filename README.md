@@ -1,46 +1,35 @@
-# Auto-ML-Service-Using-Open-Source
-### End-to-end AutoML service that explains well for both professionals and nonprofessionals and makes analysis easier to understand
+# Auto-ML Service Using Open Source
 
-1. [Goal](#Goal)
-2. [Resolution](#Resolution)
-3. [Method](#Method)
-4. [Effects](#Effects)
+### An end-to-end AutoML service designed for professionals and non-professionals, making analysis simpler and more transparent.
+
+## Table of Contents
+1. [Goal](#goal)
+2. [Solution](#solution)
+3. [Methodology](#methodology)
+4. [Results and Impact](#results-and-impact)
 
 ## Goal
-- Increased accessibility
-Due to their complexity, machine learning and artificial intelligence provide entrance obstacles for many consumers. The primary goal of this project is to make these technologies more accessible and to assist both professionals and non-professionals in reaping the benefits of AI and ML.
+- **Accessibility**: Making machine learning and artificial intelligence more accessible to all, by simplifying the process for non-professionals while still providing powerful tools for experts.
+- **Interpretability**: Address the 'black box' problem in AI models by enhancing model interpretability, allowing users to understand and trust the predictions.
+- **Optimization and Automation**: Automating essential machine learning tasks such as preprocessing, modeling, and optimization, enabling faster and more efficient model development.
+- **Enhanced Decision-Making**: Providing data-driven insights to support business decisions through better analysis and model interpretation.
 
-- Improve the model's interpretability.
-The model's 'black box' issue causes a lack of dependability and openness. This project attempts to improve the model's interpretability so that users may better comprehend the model's predictions and conclusions.
+## Solution
+- **AutoML Integration**: We utilize AutoML to automate data preprocessing, exploratory data analysis (EDA), modeling, and optimization, so that users can develop models without complex coding.
+- **XAI (Explainable AI) Techniques**: XAI methods like SHAP, LIME, and PDP are used to explain model behavior and predictions, enhancing trust and transparency in AI-driven decisions.
+- **Advanced Visualization and Analysis**: The system offers various visualizations to help users understand data and model performance, ensuring detailed insights.
+- **User-Friendly Interface**: A simple interface allows users to upload data, run models, and see analysis results with minimal effort.
 
-- Optimization and Automation
-It seeks to automate essential machine learning operations such as data preprocessing, modeling, and optimization in order to help users develop and improve their models more quickly and efficiently.
+## Methodology
+- **Technologies Used**: Python, Streamlit
+- **Process**:
+  1. **Data Upload**: Users upload their datasets.
+  2. **Data Preprocessing**: Set target features and choose preprocessing options such as outlier removal and scaling.
+  3. **Exploratory Data Analysis (EDA)**: Visualize data and explore key features, with additional processing options post-EDA.
+  4. **Modeling, Optimization, and Prediction**: AutoML libraries like PyCaret optimize models and make predictions.
+  5. **Visualization and Interpretation**: Using XAI tools, the system provides variable importance, individual prediction analysis, and overall model interpretability.
 
-- Enhanced decision support
-To assist companies and individuals in making data-driven decisions by improving data analysis and model interpretation.
-
-## Resolution
-- Making Use of AutoML
-It uses AutoML technology to automate data pre-processing, exploratory data analysis (EDA), modeling, and optimization procedures for users. This enables users to create and optimize machine learning models without the need for sophisticated coding.
-
-- Use of XAI (Explicable AI) Techniques
-The XAI technique is used to improve the model's transparency and dependability by visually explaining the model's prediction and variable relevance. Improve the interpretation and dependability of the model by providing users with a detailed grasp of its behavior and prediction.
-
-- Visualization and analysis are detailed.
-Provides a multitude of visualizations and analytical features to users in order to deliver meaningful information. Users gain better knowledge of data and model performance as a result.
-
-- It has a user-friendly UI.
-Users may simply submit data and review analytic results thanks to user-friendly interfaces. It also facilitates modeling and analysis through simple activities like button clicks.
-
-## Method
-- Using Tool: Python, Streamlit
-- Data Upload
-- Data Preprocessing : Set the target feature and allow the user to select the desired pre-processing format (outlier removal, data scaling, etc.), or use it as the default state.
-- EDA: Provides a variety of EDA elements, and provides additional data processing options after EDA
-- Modeling & Optimization & Predicting: The AutoML library selects the best performing model among optimized models. Make a prediction with the model.
-- Visualization and Results Analysis: Using XAI techniques such as shap,pdp,ice,lime, etc., the importance of variables, the effect of variables on prediction, regional and individual variable analysis, etc. are conducted.
-
-## Effects
-- Our user-friendly AutoML service utilizes XAI technology to reduce the complexity and increase transparency of artificial intelligence, thereby improving the accessibility of AI technology by helping not only professionals but also nonprofessionals make data-driven decisions easily.
-- Our AutoML service simplifies data analysis by providing customized modes for both professionals and nonprofessionals, and integrates XAI technology to clearly understand the validity and results of the model.
-- By integrating various libraries such as PyCaret, it is expected to provide users with broader functionality and contribute to the overall industry development.
+## Results and Impact
+- **Improved Accessibility**: By combining user-friendly UI with XAI, our AutoML service makes AI more approachable for non-experts while providing advanced tools for professionals.
+- **Simplified Data Analysis**: With custom modes for different user groups, the service helps both experts and novices make data-driven decisions with ease.
+- **Contributions to the Industry**: Through the integration of various open-source libraries, the project broadens functionality and supports the development of AI technologies across industries.
