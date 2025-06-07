@@ -1,0 +1,151 @@
+
+    <html><head><meta charset='utf-8'>
+    <style>
+    body {font-family:'Pretendard','Arial',sans-serif;background:#f6f8fa;}
+    .report-section {background:#F8FAFC; border-radius:18px; box-shadow:0 2px 8px #E0E7EF; padding:30px 32px 24px 32px; margin-bottom:32px;}
+    .report-title {font-size:2.3rem;font-weight:700;letter-spacing:-0.02em; color:#305784; margin-bottom:1.3rem;}
+    .report-sub {font-size:1.3rem;font-weight:600;color:#1B334B;}
+    .metric-card {display:inline-block; background:#fff; margin: 0 16px 16px 0; border-radius:14px; padding:16px 22px; box-shadow:0 2px 7px #E7EEF6;}
+    .metric-title {font-size:1rem; color:#666;}
+    .metric-value {font-size:1.2rem; font-weight:700; color:#3854AF;}
+    </style>
+    </head><body>
+    <div class="report-title">🔮 AutoML Time Series Report</div>
+    <div class="report-section">
+    <span class="report-sub">📂 Project Overview</span>
+    <ul>
+        <li><b>Task:</b> Time‑Series</li>
+        <li><b>Target:</b> Sales</li>
+        <li><b>Time Column:</b> Month</li>
+        <li><b>Rows × Cols:</b> 105 × 2</li>
+    </ul>
+    </div>
+    <div class="report-section">
+    <span class="report-sub">🔍 EDA & Data Summary</span>
+    <ul>
+    <li>총 105개 샘플, 시계열 컬럼(Month)이 datetime 타입: True</li><li>결측치 없음</li><li>Timestamp 중복 없음</li><li>타깃 분포 – Skewness: 1.62, Kurtosis: 2.52</li><li>STL로 추세/계절성/잔차 분해 성공</li><li>ADF p-value=0.3639: 비정상성 (차분/변환 필요)</li><li>ACF(자기상관) 분석 수행 (nlags=10)</li><li>이상치 비율 9.52%</li><li>월/요일별 평균 시각화</li><li>ydata_profiling 리포트 생성</li>
+    </ul>
+    </div>
+    <div class="report-section">
+    <span class="report-sub">🛠️ Preprocessing Steps</span>
+    <ul>
+    <li>시간순으로 데이터 정렬</li><li>수치형 결측 없음</li><li>범주형 결측 없음</li><li>중복 timestamp 없음</li><li>month/weekday/hour/is_weekend 파생</li><li>lag1, lag7, rolling_mean_7, rolling_std_7 생성</li><li>행 개수 부족/수치형 부족: 이상치 탐지 생략</li><li>평균 Skewness 0.00: 1 미만 → StandardScaler</li><li>스케일링 + 최종 입력 피처: lag1, lag7, rolling_mean_7, rolling_std_7, month, weekday, hour, is_weekend</li>
+    </ul>
+    </div>
+    <div class="report-section">
+    <span class="report-sub">🤖 Model Search & Leaderboard</span>
+    <table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Model</th>
+      <th>Params</th>
+      <th>MSE</th>
+      <th>MAE</th>
+      <th>R2</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>GradientBoosting</td>
+      <td>{'n_estimators': 100, 'learning_rate': 0.05, 'max_depth': 5}</td>
+      <td>8.239586e+05</td>
+      <td>786.477044</td>
+      <td>0.900734</td>
+    </tr>
+    <tr>
+      <td>RandomForest</td>
+      <td>{'n_estimators': 100, 'max_depth': 10}</td>
+      <td>8.847883e+05</td>
+      <td>778.066400</td>
+      <td>0.893406</td>
+    </tr>
+    <tr>
+      <td>XGBoost</td>
+      <td>{'n_estimators': 100, 'learning_rate': 0.1, 'max_depth': 5}</td>
+      <td>1.302738e+06</td>
+      <td>1003.102539</td>
+      <td>0.843054</td>
+    </tr>
+    <tr>
+      <td>LightGBM</td>
+      <td>{'n_estimators': 100, 'learning_rate': 0.1, 'max_depth': 3}</td>
+      <td>1.464796e+06</td>
+      <td>911.181689</td>
+      <td>0.823530</td>
+    </tr>
+    <tr>
+      <td>Lasso</td>
+      <td>{'alpha': 1.0}</td>
+      <td>1.915049e+06</td>
+      <td>1011.358610</td>
+      <td>0.769286</td>
+    </tr>
+    <tr>
+      <td>Ridge</td>
+      <td>{'alpha': 0.1}</td>
+      <td>1.916152e+06</td>
+      <td>1011.683251</td>
+      <td>0.769154</td>
+    </tr>
+  </tbody>
+</table>
+    <div class='metric-card'><span class='metric-title'>Best Model</span><br><span class='metric-value'>GradientBoosting</span></div>
+    <div class='metric-card'><span class='metric-title'>Best Params</span><br><span class='metric-value'>{'n_estimators': 100, 'learning_rate': 0.05, 'max_depth': 5}</span></div>
+    </div>
+    <div class="report-section">
+    <span class="report-sub">📊 Test Set Metrics</span><br>
+    <div class='metric-card'><span class='metric-title'>MSE</span><br><span class='metric-value'>823958.5983</span></div><div class='metric-card'><span class='metric-title'>RMSE</span><br><span class='metric-value'>907.7217</span></div><div class='metric-card'><span class='metric-title'>MAE</span><br><span class='metric-value'>786.4770</span></div><div class='metric-card'><span class='metric-title'>MAPE</span><br><span class='metric-value'>0.2135</span></div><div class='metric-card'><span class='metric-title'>R2</span><br><span class='metric-value'>0.9007</span></div>
+    </div>
+    <div class="report-section">
+    <span class="report-sub">🚨 Top 5 Largest Errors (시점)</span>
+    <table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>시점</th>
+      <th>실제값</th>
+      <th>예측값</th>
+      <th>에러</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1971-09-01</td>
+      <td>5951</td>
+      <td>4262.847215</td>
+      <td>1688.152785</td>
+    </tr>
+    <tr>
+      <td>1971-11-01</td>
+      <td>9851</td>
+      <td>11438.321318</td>
+      <td>1587.321318</td>
+    </tr>
+    <tr>
+      <td>1972-08-01</td>
+      <td>1413</td>
+      <td>2865.564426</td>
+      <td>1452.564426</td>
+    </tr>
+    <tr>
+      <td>1971-08-01</td>
+      <td>1659</td>
+      <td>3015.231680</td>
+      <td>1356.231680</td>
+    </tr>
+    <tr>
+      <td>1970-09-01</td>
+      <td>5221</td>
+      <td>3878.654321</td>
+      <td>1342.345679</td>
+    </tr>
+  </tbody>
+</table>
+    </div>
+    <div class="report-section">
+    <span class="report-sub">🌈 XAI Interpretation Highlights</span>
+    <ul>
+    <li>Month 등 주요 시계열 feature가 예측에 가장 영향.</li><li>SHAP summary: 최근 데이터가 예측 변화의 40% 이상을 설명.</li>
+    </ul>
+    </div>
+    </body></html>
+    
