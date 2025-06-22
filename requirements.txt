@@ -1,0 +1,16 @@
+streamlit>=1.30
+scikit-learn>=1.2
+pandas>=1.5
+numpy>=1.23
+matplotlib>=3.6
+seaborn>=0.12
+scipy>=1.10
+lightgbm>=4.0
+shap>=0.44
+ydata-profiling>=4.6
+statsmodels>=0.14
+
+# 선택적 (특정 기능 사용 시만 필요)
+xgboost>=2.0       # (만약 XGBoost 사용 시)
+catboost>=1.2      # (CatBoost 사용 시)
+openpyxl           # (Excel 저장 등 필요 시)
