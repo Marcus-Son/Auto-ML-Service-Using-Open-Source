@@ -1,22 +1,22 @@
-# User-Friendly AutoML Program for Everyone
+# 🚀 User-Friendly AutoML Program for Everyone
 
-## 1. Overview
+## 1. 🌟 Overview
 
-This project is an **all-in-one AutoML platform designed for everyone—from beginners to professional data scientists**.  
+This project is an **all-in-one AutoML platform** designed for everyone—from beginners to professional data scientists.  
 By simply uploading tabular data (CSV, Excel, etc.) through a web interface,  
-the platform automatically detects the task type (Regression / Classification / Time Series),  
-performs EDA (Exploratory Data Analysis), preprocessing, feature engineering, model selection and tuning, evaluation, and XAI-based interpretation—  
-**all in a single click, without any coding required**.
+the platform automatically detects the task type (**Regression / Classification / Time Series**),  
+performs **EDA**, preprocessing, feature engineering, model selection/tuning, evaluation, and XAI-based interpretation—  
+**all in a single click, without any coding required.**
 
-- **Fully Automated:** End-to-end pipeline from preprocessing to modeling and reporting, triggered by data upload
-- **User-Friendly:** Intuitive web UI built with Streamlit
-- **Production-Grade Quality:** Diverse models and algorithms, advanced preprocessing, built-in XAI (explainable AI) support
-- **Versatility:** Supports classification, regression, and time series forecasting
-- **Portfolio & Industry Ready:** Ideal for data science internship/job portfolios in the U.S., and practical for real-world business applications
+- ✅ **Fully Automated:** End-to-end pipeline from preprocessing to modeling and reporting, triggered by data upload  
+- ✅ **User-Friendly:** Intuitive web UI built with Streamlit  
+- ✅ **Production-Grade Quality:** Diverse models and algorithms, advanced preprocessing, built-in XAI (explainable AI) support  
+- ✅ **Versatility:** Supports classification, regression, and time series forecasting  
+- ✅ **Portfolio & Industry Ready:** Ideal for data science internship/job portfolios in the U.S., and practical for real-world business applications  
 
 ---
 
-## 2. Key Features
+## 2. ✨ Key Features
 
 - **Fully Automated Machine Learning Pipeline**  
   End-to-end automation: just upload your data and receive automatic exploratory data analysis (EDA), preprocessing, feature engineering, model selection and hyperparameter tuning, evaluation, and report generation.
@@ -41,7 +41,7 @@ performs EDA (Exploratory Data Analysis), preprocessing, feature engineering, mo
 
 ---
 
-## 3. Project Structure
+## 3. 🗂️ Project Structure
 
 ├── app.py                       # Main Streamlit web app
 ├── requirements.txt             # Python package requirements
@@ -74,7 +74,7 @@ performs EDA (Exploratory Data Analysis), preprocessing, feature engineering, mo
 
 ---
 
-## 4. Tech Stack
+## 4. ⚙️ Tech Stack
 
 - **Python 3.8+**  
 - **Streamlit**: User-friendly web UI for interaction
@@ -89,7 +89,7 @@ performs EDA (Exploratory Data Analysis), preprocessing, feature engineering, mo
 
 ---
 
-## 5. Installation & Getting Started
+## 5. 🚀 Installation & Getting Started
 
 1. **Clone the repository**
     ```bash
@@ -114,7 +114,7 @@ performs EDA (Exploratory Data Analysis), preprocessing, feature engineering, mo
 
 ---
 
-## 6. How To Use
+## 6. 📋 How To Use
 
 1. **Upload your dataset (CSV or Parquet) via the web UI**
 2. **Select the target column (and time column for time series tasks)**
@@ -146,7 +146,7 @@ You can directly upload these datasets through the web UI to explore the automat
 
 ---
 
-## 7. Automation Pipeline Details
+## 7. 🔄 Automation Pipeline Details
 
 This project fully automates every essential step of the data science pipeline. Once a user uploads their data, the following processes run automatically:
 
@@ -173,7 +173,7 @@ This project fully automates every essential step of the data science pipeline. 
 
 ---
 
-## 8. Sample Output & Results
+## 8. 📊 Sample Output & Results
 
 - This project automates the entire data science workflow: from data upload and EDA to preprocessing, modeling, evaluation, explainability (XAI), and automated report generation.
 - Below are sample outputs and screenshots from a real execution of the application.
@@ -231,7 +231,7 @@ This project fully automates every essential step of the data science pipeline. 
 
 ---
 
-## 9. Career/Portfolio Highlights
+## 9. 💼 Career/Portfolio Highlights
 
 ### Key Strengths & Differentiators
 
@@ -253,7 +253,7 @@ This project fully automates every essential step of the data science pipeline. 
 
 ---
 
-## 10. Contributing
+## 10. 🤝 Contributing
 
 - Everyone is welcome to contribute to this project!
 - All forms of contribution are appreciated, including bug reports, feature suggestions, documentation, and code improvements.
@@ -263,7 +263,7 @@ This project fully automates every essential step of the data science pipeline. 
 
 ---
 
-## 11. Frequently Asked Questions (FAQ)
+## 11. ❓ Frequently Asked Questions (FAQ)
 
 **Q. Do I need a Python environment to use this project?**  
 A. Yes, this AutoML platform requires Python (>=3.8). All dependencies are listed in `requirements.txt`.
@@ -279,7 +279,7 @@ A. Yes, the modular codebase allows easy extension—just edit the relevant scri
 
 ---
 
-## 12. License
+## 12. 📜 License
 
 - This project is licensed under the [MIT License](./LICENSE).
 - You are free to use, modify, and distribute this software for both commercial and non-commercial purposes.
@@ -287,7 +287,7 @@ A. Yes, the modular codebase allows easy extension—just edit the relevant scri
 
 ---
 
-## 13. Limitations & Disclaimer
+## 13. ⚠️ Limitations & Disclaimer
 
 - **Scope:**  
   This AutoML platform is optimized for **tabular (structured) data**. It is not designed for image, text (NLP), or raw unstructured data.
@@ -300,4 +300,4 @@ A. Yes, the modular codebase allows easy extension—just edit the relevant scri
 - **Custom Extensions:**  
   If you need more advanced model types or integrations, the codebase is modular for your own extension.
 - **Disclaimer:**  
-  This software is provided as-is for learning and rapid prototyping; for high-stakes or production deployments, further validation and security reviews are advised.
+  This software is provided as-is for learning and rapid prototyping; for high-stakes or production deployments, further validation and security reviews are advised. 
