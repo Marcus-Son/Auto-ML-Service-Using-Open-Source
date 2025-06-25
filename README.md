@@ -2,6 +2,9 @@
 
 ## 1. 🌟 Overview
 
+**🎬 Demo Video:**  
+[▶️ Watch on YouTube](https://youtu.be/rONjcUmTDWk)
+
 This project is an **all-in-one AutoML platform** designed for everyone—from beginners to professional data scientists.  
 By simply uploading tabular data (CSV, Excel, etc.) through a web interface,  
 the platform automatically detects the task type (**Regression / Classification / Time Series**),  
