@@ -46,6 +46,7 @@ performs **EDA**, preprocessing, feature engineering, model selection/tuning, ev
 
 ## 3. 🗂️ Project Structure
 
+```
 ├── app.py                       # Main Streamlit web app
 ├── requirements.txt             # Python package requirements
 ├── README.md                    # Project overview and instructions
@@ -72,6 +73,7 @@ performs **EDA**, preprocessing, feature engineering, model selection/tuning, ev
 │       ├── evaluation.py
 │       └── report.py
 └── (Other data and report files)
+```
 
 > For detailed explanations of each folder and file, see the following "Project Structure" section below.
 
